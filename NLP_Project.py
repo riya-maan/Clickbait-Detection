@@ -2,8 +2,6 @@
 """
 Spyder Editor
 ====================================================
-Change file location here and in wordLists.py
-
 import nltk  -----> in console
 nltk.download()  -----> in console
 select model vader_lexicon and download!! (for Vader sentiment analysis)
@@ -81,7 +79,7 @@ for i in range(0,n):
     trainingSet = my_PCA.fit_transform(trainingSet)
     
     # fit SVR on training data
-    clf = SVR(C=1.0, epsilon=0.01, kernel = 'linear')
+    clf = SVR(C=1.0, epsilon=0.01, kernel = 'rbf')
     clf.fit(trainingSet, trainingLabels) 
     
     # transform testing dataset features 
